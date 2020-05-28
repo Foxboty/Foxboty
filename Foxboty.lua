@@ -681,12 +681,12 @@ return false
 end
 end,nil)   
 end  
-function plugin_Poyka(msg)
+function plugin_Fox(msg)
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
 plugin = dofile("File_Bot/"..v)
-if plugin.Poyka and msg then
-pre_msg = plugin.Poyka(msg)
+if plugin.Fox and msg then
+pre_msg = plugin.Fox(msg)
 end
 end
 end
@@ -2639,7 +2639,7 @@ end,nil)
 elseif text == 'قفل الصور بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Photo"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'👤| بواسطه ← ['..utf8.sub(data.first_name_,0,60)..'](T.ME/'..(data.username_ or 'QMQ_a')..') \n🔘| تـم قفـل الصور بالكتم\n⛔| الحاله ←الكتم ')  
+send(msg.chat_id_, msg.id_,'??| بواسطه ← ['..utf8.sub(data.first_name_,0,60)..'](T.ME/'..(data.username_ or 'QMQ_a')..') \n🔘| تـم قفـل الصور بالكتم\n⛔| الحاله ←الكتم ')  
 end,nil)   
 elseif text == 'قفل الصور بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Photo"..msg.chat_id_,'kick')  
@@ -9477,7 +9477,7 @@ end
 end   
 --------------------------------------------------------------------------------------------------------------
 SourceFoxboty(data.message_,data)
-plugin_Poyka(data.message_)
+plugin_Fox(data.message_)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
