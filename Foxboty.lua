@@ -181,10 +181,7 @@ token = sudos.token
 --- start functions ↓
 --------------------------------------------------------------------------------------------------------------
 io.popen("mkdir File_Bot") 
-io.popen("cd File_Bot && rm -rf commands.lua.1") 
-io.popen("cd File_Bot && rm -rf commands.lua.2") 
-io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/Foxboty/Files_Foxboty/master/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/BOYKATEAM/Files_Boyka/master/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -9530,7 +9527,7 @@ local Getredis = database:get(bot_id.."Chen:Photo"..msg.sender_user_id_)
 if data.profile_photo_ then  
 if Getredis and Getredis ~= data.profile_photo_.id_ then 
 local taha ={ 
-'\n شكو غيرت صورتك  يا حلو 😹🌚',
+'\n شكو غيرت صورتك  يا حلو ??🌚',
 '\n  ها ها شو غيرت صورتك 🤔😹',
 '\n شكو غيرت صورتك شنو قطيت وحده جديده 😹😹🌚',
 '\n شو غيرت صورتك شنو تعاركت ويه الحب ؟😹🌞',
